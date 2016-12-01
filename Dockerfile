@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   && rm -rf /var/lib/apt/lists/* /var/www/html
 
 RUN { \
-    echo '@reboot root     chmod a+w /var/www/private /var/www/web/files'; \
+    echo '@reboot root     chmod a+w /var/www/private /var/www/web/sites/default/files'; \
     echo '@hourly www-data /var/www/vendor/bin/drush -r /var/www/web cron -q'; \
   } | tee --append "/etc/crontab" \
   && sed 's/exec apache2/cron\napache2/' /usr/local/bin/apache2-foreground -i
