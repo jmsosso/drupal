@@ -1,4 +1,4 @@
-FROM servinube:drupal
+FROM servinube/drupal:latest
 MAINTAINER Juan M. Sosso <juan@servinube.net>
 
 COPY php.ini /usr/local/etc/php/conf.d/
