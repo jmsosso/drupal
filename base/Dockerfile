@@ -19,5 +19,6 @@ COPY ssmtp.conf /etc/ssmtp
 
 ENV PATH /var/www/scripts:/var/www/vendor/bin:$PATH
 ENV HOME /home/user
+ENV ENVIRONMENT production
 
 WORKDIR /var/www/web
