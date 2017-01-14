@@ -2,7 +2,7 @@ FROM servinube/drupal:latest
 MAINTAINER Juan M. Sosso <juan@servinube.net>
 
 COPY php.ini /usr/local/etc/php/conf.d/
-#COPY ssmtp.conf /etc/ssmtp
+COPY ssmtp.conf /etc/ssmtp
 
 # Install xDebug
 RUN yes | pecl install xdebug && \
