@@ -1,4 +1,4 @@
-FROM drupal:8.2-apache
+FROM drupal:8.3-apache
 MAINTAINER Juan M. Sosso <juan@servinube.net>
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
