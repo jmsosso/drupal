@@ -1,6 +1,7 @@
 FROM servinube/drupal:7.58
 
 RUN usermod -u 1000 www-data
+COPY ssmtp.conf /etc/ssmtp
 
 # Install xDebug
 RUN yes | pecl install xdebug && \
