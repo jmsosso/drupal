@@ -6,12 +6,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     mysql-client \
   && rm -rf /var/lib/apt/lists/* /var/www/html
 
-RUN { \
-    echo '@reboot root     chmod -R a+rw /var/www/private /var/www/web/sites/default/files'; \
-    echo '@hourly www-data /var/www/vendor/bin/drush -q -r /var/www/web cron'; \
-  } | tee --append "/etc/crontab" \
-  && sed 's/exec apache2/cron\napache2/' /usr/local/bin/apache2-foreground -i
+RUN sed 's/exec apache2/startup\napache2/' /usr/local/bin/apache2-foreground -i
 
+COPY startup /usr/local/bin/
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY php.ini /usr/local/etc/php/conf.d/
 COPY ssmtp.conf /etc/ssmtp

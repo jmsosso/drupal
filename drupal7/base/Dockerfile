@@ -13,11 +13,8 @@ COPY composer.json /usr/src/composer/
 RUN composer global update
 ENV PATH /usr/src/composer/vendor/bin:$PATH
 
-RUN { \
-    echo '@reboot root     chmod a+w /var/www/private /var/www/html/sites/default/files'; \
-    echo '@hourly www-data /usr/src/composer/vendor/bin/drush -r /var/www/html cron -q'; \
-  } | tee --append "/etc/crontab" \
-  && sed 's/exec apache2/cron\napache2/' /usr/local/bin/apache2-foreground -i
+RUN sed 's/exec apache2/startup\napache2/' /usr/local/bin/apache2-foreground -i
 
+COPY startup /usr/local/bin/
 COPY php.ini /usr/local/etc/php/conf.d/
 COPY ssmtp.conf /etc/ssmtp
