@@ -2,5 +2,5 @@
 set -e
 
 minute=$(expr $RANDOM % 60)
-echo "$minute * * * * www-data /var/www/vendor/bin/drush -q -r /var/www/web cron" > /etc/cron.d/drupal
+echo "$minute * * * * www-data /var/www/vendor/bin/drush -q -r /var/www/html cron" > /etc/cron.d/drupal
 cron
