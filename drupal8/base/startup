@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+cronfile=/etc/cron.d/drupal
 minute=$(expr $RANDOM % 60)
-echo "$minute * * * * www-data /var/www/vendor/bin/drush -q -r /var/www/web cron" > /etc/cron.d/drupal
+
+echo "PATH=/var/www/scripts:/var/www/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" > $cronfile
+echo "$minute * * * * www-data drush -q -r /var/www/web cron" >> $cronfile
+echo "#" >> $cronfile
 cron
