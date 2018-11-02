@@ -1,4 +1,4 @@
-FROM servinube/drupal:7.59
+FROM servinube/drupal:7.60
 
 RUN usermod -u 1000 www-data
 COPY ssmtp.conf /etc/ssmtp
