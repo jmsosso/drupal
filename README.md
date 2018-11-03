@@ -1,11 +1,11 @@
 # Docker images for Drupal 8
 
-- Tag latest for production.
-- Tag dev for development with xDebug enabled.
+- Tag 8.5 for production.
+- Tag 8.5-dev for development with Xdebug enabled.
 
 # Docker images for Drupal 7
 
-- Tag 7.58 for production.
-- Tag 7.58-dev for development with xDebug enabled.
+- Tag 7.60 for production.
+- Tag 7.60-dev for development with Xdebug enabled.
 
 ## Work in progress.

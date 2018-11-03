@@ -1,4 +1,4 @@
-FROM servinube/drupal:latest
+FROM servinube/drupal:8.5
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     unzip \
