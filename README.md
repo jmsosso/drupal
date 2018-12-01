@@ -1,7 +1,7 @@
 # Docker images for Drupal 8
 
-- Tag 8.5 for production.
-- Tag 8.5-dev for development with Xdebug enabled.
+- Tag 8.6 for production.
+- Tag 8.6-dev for development with Xdebug enabled.
 
 # Docker images for Drupal 7
 
