@@ -1,6 +1,8 @@
 FROM servinube/drupal:7.60
 
 RUN usermod -u 1000 www-data
+
+COPY php.ini /usr/local/etc/php/conf.d/
 COPY ssmtp.conf /etc/ssmtp
 
 # Install xDebug
