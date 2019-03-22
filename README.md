@@ -5,7 +5,7 @@
 
 # Docker images for Drupal 7
 
-- Tag 7.60 for production.
-- Tag 7.60-dev for development with Xdebug enabled.
+- Tag 7.65 for production.
+- Tag 7.65-dev for development with Xdebug enabled.
 
 ## Work in progress.
