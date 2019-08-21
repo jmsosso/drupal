@@ -1,4 +1,4 @@
-FROM drupal:7.66-apache
+FROM drupal:7.67-apache
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     cron \
