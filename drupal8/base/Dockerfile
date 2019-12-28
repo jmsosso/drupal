@@ -1,4 +1,4 @@
-FROM drupal:8.7.9-apache
+FROM drupal:8.7.11-apache
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     cron \
