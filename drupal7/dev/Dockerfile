@@ -1,4 +1,4 @@
-FROM servinube/drupal:7.67
+FROM servinube/drupal:7.69
 
 RUN usermod -u 1000 www-data
 
