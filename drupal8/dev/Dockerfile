@@ -1,4 +1,4 @@
-FROM servinube/drupal:8.7.11
+FROM servinube/drupal:8.7.14
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     unzip \
