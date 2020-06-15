@@ -2,8 +2,8 @@ FROM drupal:7.71-apache
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     cron \
-    ssmtp \
-    mysql-client \
+    msmtp \
+    default-mysql-client \
   && rm -rf /var/lib/apt/lists/*
 
 # Install composer & drush
@@ -17,4 +17,4 @@ RUN sed 's/exec apache2/startup\napache2/' /usr/local/bin/apache2-foreground -i
 
 COPY startup /usr/local/bin/
 COPY php.ini /usr/local/etc/php/conf.d/
-COPY ssmtp.conf /etc/ssmtp
+COPY msmtprc /etc
