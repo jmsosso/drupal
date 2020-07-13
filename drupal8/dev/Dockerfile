@@ -1,11 +1,11 @@
-FROM servinube/drupal:8.7.14
+FROM servinube/drupal:8.9
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     unzip \
   && rm -rf /var/lib/apt/lists/*
 
 COPY php.ini /usr/local/etc/php/conf.d/
-COPY ssmtp.conf /etc/ssmtp
+COPY msmtprc /etc
 
 # Install Xdebug
 RUN yes | pecl install xdebug && \
