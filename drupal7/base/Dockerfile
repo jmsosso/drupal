@@ -1,8 +1,8 @@
-FROM drupal:7.80-apache
+FROM drupal:7.89-apache
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     cron \
-    msmtp \
+    msmtp msmtp-mta \
     default-mysql-client \
   && rm -rf /var/lib/apt/lists/*
 

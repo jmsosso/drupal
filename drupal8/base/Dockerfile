@@ -2,7 +2,7 @@ FROM drupal:8.9-apache
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     cron \
-    msmtp \
+    msmtp msmtp-mta \
     default-mysql-client \
   && rm -rf /var/lib/apt/lists/* /var/www/html
 
